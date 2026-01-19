@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# Python / Venv
 .venv/
 __pycache__/
@@ -18,3 +19,15 @@ report.html
 *.iml
 .gradle/
 local.properties
+=======
+.venv/
+__pycache__/
+reports/
+*.log
+*.xml
+*.html
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
+>>>>>>> f53eb60 (chore: bootstrap Robot+Appium project)

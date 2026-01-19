@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 ﻿robotframework
+=======
+robotframework
+>>>>>>> f53eb60 (chore: bootstrap Robot+Appium project)
 robotframework-appiumlibrary
 Appium-Python-Client
