@@ -22,11 +22,6 @@ Cada tipo de teste foi separado em pastas para facilitar o entendimento e a manu
 4. `scripts\start-emulator.cmd` # ajusta AVD dentro do arquivo
 5. `scripts\run-smoke.cmd`      # gera evidências em /reports
 
-
-# 🧪 Whats Automation
-
-Projeto real de automação mobile Android com Robot Framework + Appium, arquitetura por Page Objects, scripts operacionais e pronto para CI.
-
 ---
 
 ## 🗂️ Estrutura do Projeto
