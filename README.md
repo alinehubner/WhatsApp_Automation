@@ -1,4 +1,4 @@
-# Projeto de Automação Mobile  WhatsApp Automation (Robot + Appium + Android)
+# Projeto de Automação Mobile
 
 Projeto real de automação mobile Android com Robot Framework + Appium, arquitetura por Page Objects, scripts operacionais e pronto para CI.
 
