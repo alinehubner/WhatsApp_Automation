@@ -1,16 +1,4 @@
-# Projeto de Automação Mobile
-
-Projeto real de automação mobile Android com Robot Framework + Appium, arquitetura por Page Objects, scripts operacionais e pronto para CI.
-
-## Rodada rápida (local)
-1. `python -m venv .venv && .\.venv\Scripts\activate`
-2. `pip install -r requirements.txt`
-3. `scripts\start-appium.cmd`   # mantém aberto
-4. `scripts\start-emulator.cmd` # ajusta AVD dentro do arquivo
-5. `scripts\run-smoke.cmd`      # gera evidências em /reports
-
-
-# 🧪 Whats Automation
+# 🧪 Projeto de Automação Mobile
 
 Projeto real de automação mobile Android com Robot Framework + Appium, arquitetura por Page Objects, scripts operacionais e pronto para CI.
 
@@ -25,6 +13,19 @@ O projeto contempla três tipos de testes, organizados em um único repositório
 - 📊 **Load Tests** — k6 
 
 Cada tipo de teste foi separado em pastas para facilitar o entendimento e a manutenção.
+
+
+## Rodada rápida (local)
+1. `python -m venv .venv && .\.venv\Scripts\activate`
+2. `pip install -r requirements.txt`
+3. `scripts\start-appium.cmd`   # mantém aberto
+4. `scripts\start-emulator.cmd` # ajusta AVD dentro do arquivo
+5. `scripts\run-smoke.cmd`      # gera evidências em /reports
+
+
+# 🧪 Whats Automation
+
+Projeto real de automação mobile Android com Robot Framework + Appium, arquitetura por Page Objects, scripts operacionais e pronto para CI.
 
 ---
 
