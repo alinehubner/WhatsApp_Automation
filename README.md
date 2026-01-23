@@ -7,6 +7,24 @@ gerando **relatórios HTML e screenshots**.
 Execução independente de provedor (local e CI/CD) via scripts versionados ; pipeline de referência em GitHub Actions,      
 sendo facilmente ajustável para Jenkins, GitLab, Azure, etc.
 
+---
+
+## 📌 Visão Geral do Projeto
+
+#### 🥞 **Stack**
+  - **Robot Framework** (test orchestration)
+  - **Appium Server 3 + UiAutomator2** (Android driver)
+  - **Android SDK + AVD (Emulator)** ou **Device Cloud** (execução)
+  - **Python 3.11+**
+  - **Node.js LTS** (Appium)
+
+#### 🧱 **Pontos-chave**
+> - Arquitetura em **camadas**: `resources/pages` (Page Objects), `resources/support` (keywords/utilidades), `tests/` (suites), `scripts/` (operação).
+> - **Desired Capabilities** separadas em `resources/android_caps.resource` para alternar apps/ambientes (emulador local, device cloud).
+> - **Relatórios** do Robot (HTML + screenshots) consolidados em `reports/` (**já no `.gitignore`**).
+> - **Provider-agnostic**: mesma execução local/CI via **scripts versionados**; template inicial em **GitHub Actions**, com **fácil adaptação** para Jenkins, GitLab, Azure, Bitbucket, etc.
+
+
 
 > **Pontos-chave**
 > - Arquitetura em **camadas**: `resources/pages` (POs), `resources/support` (ações utilitárias), `tests/` (suites), `scripts/` (operação).
@@ -15,17 +33,11 @@ sendo facilmente ajustável para Jenkins, GitLab, Azure, etc.
 > - **Pronto para CI**: os mesmos comandos funcionam em GitHub Actions, GitLab, Jenkins, Azure, Bitbucket.
 
 
----
-
-## 📌 Visão Geral do Projeto
-
-O projeto contempla três tipos de testes, organizados em um único repositório:
-
 - ✅ **E2E (End-to-End)** — Cypress  
 - 🔌 **API Tests** — Postman + Newman  
 - 📊 **Load Tests** — k6 
 
-Cada tipo de teste foi separado em pastas para facilitar o entendimento e a manutenção.
+
 
 
 ## Rodada rápida (local)
