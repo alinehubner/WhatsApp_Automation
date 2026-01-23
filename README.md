@@ -1,9 +1,10 @@
 # 🤖📱 Projeto de Automação Mobile
 
 Este repositório contém uma suíte de automação **mobile Android**, organizada por **Page Objects** e preparada para escalar.  
-O objetivo é validar fluxos essenciais de aplicativos Android **WhatsApp** para Cold Start/Warm Start e **Calculadora** para Smoke Test
-, gerando **relatórios HTML e screenshots**. 
-A execução é **portável** (local e CI/CD), acionada por **scripts versionados** que padronizam a experiência de desenvolvimento e publicação de evidências.
+O objetivo é validar fluxos essenciais de aplicativos **WhatsApp** para Cold Start/Warm Start e **Calculadora** para Smoke Test,
+gerando **relatórios HTML e screenshots**. 
+A execução é **portável** (local e CI/CD), acionada por **scripts versionados** que padronizam a experiência de desenvolvimento 
+e publicação de evidências.
 
 > **Pontos-chave**
 > - Arquitetura em **camadas**: `resources/pages` (POs), `resources/support` (ações utilitárias), `tests/` (suites), `scripts/` (operação).
