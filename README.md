@@ -4,7 +4,7 @@ Este repositório contém uma suíte de automação **mobile Android**, organiza
 O objetivo é validar fluxos essenciais de aplicativos **WhatsApp** para Cold Start/Warm Start e **Calculadora** para Smoke Test,      
 gerando **relatórios HTML e screenshots**. 
 
-Execução independente de provedor (local e CI/CD) via scripts versionados ; pipeline de referência em GitHub Actions,
+Execução independente de provedor (local e CI/CD) via scripts versionados ; pipeline de referência em GitHub Actions,      
 sendo facilmente ajustável para Jenkins, GitLab, Azure, etc.
 
 
