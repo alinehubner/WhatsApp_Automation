@@ -5,7 +5,7 @@ O objetivo é validar fluxos essenciais de aplicativos **WhatsApp** para Cold St
 gerando **relatórios HTML e screenshots**. 
 
 Execução independente de provedor (local e CI/CD) via scripts versionados ; pipeline de referência em GitHub Actions,
-facilmente ajustável para Jenkins, GitLab, Azure, etc.
+sendo facilmente ajustável para Jenkins, GitLab, Azure, etc.
 
 
 > **Pontos-chave**
