@@ -24,29 +24,6 @@ sendo facilmente ajustável para Jenkins, GitLab, Azure, etc.
 > - **Relatórios** do Robot (HTML + screenshots) consolidados em `reports/` (**já no `.gitignore`**).
 > - **Provider-agnostic**: mesma execução local/CI via **scripts versionados**; template inicial em **GitHub Actions**, com **fácil adaptação** para Jenkins, GitLab, Azure, Bitbucket, etc.
 
-
-
-> **Pontos-chave**
-> - Arquitetura em **camadas**: `resources/pages` (POs), `resources/support` (ações utilitárias), `tests/` (suites), `scripts/` (operação).
-> - **Capacidades separadas** (`resources/android_caps.resource`) para alternar entre apps/ambientes (emulador local, device cloud).
-> - **Relatórios** consolidados do Robot Framework em `reports/` (já no `.gitignore`).
-> - **Pronto para CI**: os mesmos comandos funcionam em GitHub Actions, GitLab, Jenkins, Azure, Bitbucket.
-
-
-- ✅ **E2E (End-to-End)** — Cypress  
-- 🔌 **API Tests** — Postman + Newman  
-- 📊 **Load Tests** — k6 
-
-
-
-
-## Rodada rápida (local)
-1. `python -m venv .venv && .\.venv\Scripts\activate`
-2. `pip install -r requirements.txt`
-3. `scripts\start-appium.cmd`   # mantém aberto
-4. `scripts\start-emulator.cmd` # ajusta AVD dentro do arquivo
-5. `scripts\run-smoke.cmd`      # gera evidências em /reports
-
 ---
 
 ## 🗂️ Estrutura do Projeto
@@ -98,6 +75,15 @@ WhatsApp_Automation/
 
 ```
 
-## Portabilidade CI/CD
+## 📎 Portabilidade CI/CD
 Toda a lógica é chamada via scripts do repositório. Qualquer provedor (GitHub/GitLab/Jenkins/Azure/Bitbucket) só precisa chamar os mesmos comandos e publicar `reports/` como artifact.
+
+
+## Rodada rápida (local)
+1. `python -m venv .venv && .\.venv\Scripts\activate`
+2. `pip install -r requirements.txt`
+3. `scripts\start-appium.cmd`   # mantém aberto
+4. `scripts\start-emulator.cmd` # ajusta AVD dentro do arquivo
+5. `scripts\run-smoke.cmd`      # gera evidências em /reports
+
 
