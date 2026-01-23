@@ -1,6 +1,15 @@
 # 🤖📱 Projeto de Automação Mobile
 
-Projeto real de automação mobile Android com Robot Framework + Appium, arquitetura por Page Objects, scripts operacionais e pronto para CI.
+Este repositório contém uma suíte de automação **mobile Android**, organizada por **Page Objects** e preparada para escalar.  
+O objetivo é validar fluxos essenciais de aplicativos Android (ex.: **WhatsApp** para navegação/abertura e **Calculadora** para smoke determinístico), gerando **relatórios HTML e screenshots**. 
+A execução é **portável** (local e CI/CD), acionada por **scripts versionados** que padronizam a experiência de desenvolvimento e publicação de evidências.
+
+> **Pontos-chave**
+> - Arquitetura em **camadas**: `resources/pages` (POs), `resources/support` (ações utilitárias), `tests/` (suites), `scripts/` (operação).
+> - **Capacidades separadas** (`resources/android_caps.resource`) para alternar entre apps/ambientes (emulador local, device cloud).
+> - **Relatórios** consolidados do Robot Framework em `reports/` (já no `.gitignore`).
+> - **Pronto para CI**: os mesmos comandos funcionam em GitHub Actions, GitLab, Jenkins, Azure, Bitbucket.
+
 
 ---
 
