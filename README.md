@@ -22,70 +22,44 @@ Cada tipo de teste foi separado em pastas para facilitar o entendimento e a manu
 
 ```
 
-whatsapp-chatbot-automation/
-├── README.md
-├── .gitignore
-├── requirements.txt
-├── robot.yaml
-├── package.json
-├── scripts/
-│   ├── run_local.ps1
-│   ├── run_local.sh
-│   ├── run_bs.ps1
-│   ├── run_bs.sh
-│   └── doctor.ps1
-│
-├── configs/
-│   ├── env/
-│   │   ├── qa.yaml
-│   │   └── prod.yaml
-│   ├── devices/
-│   │   ├── local_emulator.yaml
-│   │   └── browserstack_pixel.yaml
-│   └── caps/
-│       ├── browserstack_android.json
-│       └── local_android.json
-│
-├── tests/
-│   ├── smoke/
-│   │   └── smoke_whatsapp_chatbot.robot
-│   └── regression/
-│       └── .gitkeep
-│
+chatbot_automation/
+├── README.md                          # Documentação principal
+├── requirements.txt                   # Dependências Python
+├── robotframework.ini                 # Configuração do Robot Framework
+├── .github/
+│   └── workflows/
+│       └── run_tests.yml              # GitHub Actions CI/CD
+├── config/
+│   ├── evolution_api.robot           # Configuração da Evolution API
+│   ├── database.robot                # Configuração do banco (SQLite/MongoDB)
+│   └── credentials.yaml               # Credenciais (não versionado)
+├── database/
+│   ├── __init__.py                    # Módulo de acesso ao banco
+│   ├── sqlite_handler.py              # Handler SQLite (fase 1)
+│   └── mongo_handler.py               # Handler MongoDB (fase 2 - preparado)
 ├── resources/
-│   ├── services/
-│   │   ├── appium_driver.robot
-│   │   ├── browserstack_driver.robot
-│   │   └── local_driver.robot
-│   ├── pages/
-│   │   ├── whatsapp_home_page.robot
-│   │   ├── whatsapp_chat_page.robot
-│   │   └── whatsapp_permissions_page.robot
 │   ├── keywords/
-│   │   ├── common_keywords.robot
-│   │   ├── whatsapp_keywords.robot
-│   │   └── chatbot_keywords.robot
+│   │   ├── whatsapp_keywords.robot   # Keywords para WhatsApp
+│   │   ├── evolution_api_keywords.robot  # Keywords para Evolution API
+│   │   └── database_keywords.robot    # Keywords para banco de dados
 │   └── variables/
-│       ├── locators.robot
-│       └── constants.robot
-│
-├── data/
-│   ├── messages/
-│   │   ├── intents_core.yaml
-│   │   └── intents_fallback.yaml
-│   └── users/
-│       └── users_example.json
-│
-├── libs/
-│   ├── __init__.py
-│   └── helpers.py
-│
-├── results/
-│   └── .gitkeep
-│
-└── .github/
-    └── workflows/
-        └── mobile-tests-browserstack.yml
+│       └── variables.robot            # Variáveis globais
+├── tests/
+│   ├── beneficiario/
+│   │   ├── iniciar_conversa.robot    # Teste: Beneficiário inicia conversa
+│   │   └── enviar_mensagem.robot     # Teste: Enviar mensagem básica
+│   └── advogado/
+│       ├── iniciar_conversa.robot    # Teste: Advogado inicia conversa
+│       └── responder_beneficiario.robot  # Teste: Advogado responde
+├── results/                           # Resultados dos testes (gerado)
+│   ├── log.html                       # Log detalhado
+│   ├── report.html                    # Relatório executivo
+│   ├── screenshots/                   # Screenshots das conversas
+│   └── database/                      # Banco SQLite local
+│       └── test_history.db            # Histórico de testes
+└── docs/
+    ├── guia_iniciante.md              # Guia passo a passo
+    └── migracao_producao.md           # Guia de migração para produção
 
 
 ```
@@ -205,6 +179,7 @@ O diretorio `evidence/` contem apenas exemplos ilustrativos dos tipos de evidenc
 ---
 
 Ele não tem como objetivo ser um framework completo, mas sim demonstrar entendimento do processo, boas decisões técnicas e capacidade de explicar o que foi feito.
+
 
 
 
